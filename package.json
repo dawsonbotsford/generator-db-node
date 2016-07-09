@@ -1,9 +1,9 @@
 {
-  "name": "generator-node",
+  "name": "generator-db-node",
   "version": "1.10.2",
   "main": "index.js",
   "description": "Create a Node.js module",
-  "homepage": "https://github.com/yeoman/generator-node",
+  "homepage": "https://github.com/yeoman/generator-db-node",
   "keywords": [
     "yeoman-generator",
     "scaffold",
@@ -12,7 +12,7 @@
     "cli"
   ],
   "author": "Yeoman team",
-  "repository": "yeoman/generator-node",
+  "repository": "yeoman/generator-db-node",
   "scripts": {
     "test": "gulp",
     "prepublish": "gulp prepublish"

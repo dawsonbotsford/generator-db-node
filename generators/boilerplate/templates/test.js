@@ -1,6 +1,6 @@
 <% if (babel) { -%>
-import assert from 'assert';
-import <%= pkgSafeName %> from '../lib';
+const assert = require('assert');
+const <%= pkgSafeName %> = require('../lib');
 <% } else { -%>
 'use strict';
 

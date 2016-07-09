@@ -1,7 +1,9 @@
-# <%= projectName %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]<%
+# <%= projectName %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] <%
 if (includeCoveralls) { %> [![Coverage percentage][coveralls-image]][coveralls-url]<% } -%>
 
 > <%= description %>
+
+<br>
 
 <% if (!content) { -%>
 ## Installation
@@ -9,6 +11,8 @@ if (includeCoveralls) { %> [![Coverage percentage][coveralls-image]][coveralls-u
 ```sh
 $ npm install --save <%= projectName %>
 ```
+
+<br>
 
 ## Usage
 
@@ -20,6 +24,8 @@ var <%= safeProjectName %> = require('<%= projectName %>');
 <% } else { -%>
 <%= content %>
 <% } -%>
+<br>
+
 ## License
 
 <%= license %> © [<%= author.name %>](<%= author.url %>)
@@ -29,8 +35,6 @@ var <%= safeProjectName %> = require('<%= projectName %>');
 [npm-url]: https://npmjs.org/package/<%= projectName %>
 [travis-image]: https://travis-ci.org/<%= githubAccount %>/<%= projectName %>.svg?branch=master
 [travis-url]: https://travis-ci.org/<%= githubAccount %>/<%= projectName %>
-[daviddm-image]: https://david-dm.org/<%= githubAccount %>/<%= projectName %>.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/<%= githubAccount %>/<%= projectName %>
 <% if (includeCoveralls) { -%>
 [coveralls-image]: https://coveralls.io/repos/<%= githubAccount %>/<%= projectName %>/badge.svg
 [coveralls-url]: https://coveralls.io/r/<%= githubAccount %>/<%= projectName %>

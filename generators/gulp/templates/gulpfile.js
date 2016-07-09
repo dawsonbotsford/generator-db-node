@@ -99,3 +99,4 @@ gulp.task('clean', function () {
 
 gulp.task('prepublish', <%- prepublishTasks %>);
 gulp.task('default', <%- tasks %>);
+gulp.task('build', ['babel']);

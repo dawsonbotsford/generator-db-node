@@ -57,8 +57,10 @@ module.exports = generators.Base.extend({
           'gulp-nsp': '^2.1.0'
         },
         scripts: {
+          build: 'gulp build',
           prepublish: 'gulp prepublish',
-          test: 'gulp'
+          test: 'gulp',
+          watch: 'gulp run watch'
         }
       });
 

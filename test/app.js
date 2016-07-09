@@ -34,7 +34,7 @@ describe('node:app', function () {
   describe('running on new project', function () {
     before(function () {
       this.answers = {
-        name: 'generator-node',
+        name: 'generator-db-node',
         description: 'A node generator',
         homepage: 'http://yeoman.io',
         githubAccount: 'yeoman',
@@ -63,11 +63,11 @@ describe('node:app', function () {
     it('creates package.json', function () {
       assert.file('package.json');
       assert.jsonFileContent('package.json', {
-        name: 'generator-node',
+        name: 'generator-db-node',
         version: '0.0.0',
         description: this.answers.description,
         homepage: this.answers.homepage,
-        repository: 'yeoman/generator-node',
+        repository: 'yeoman/generator-db-node',
         author: {
           name: this.answers.authorName,
           email: this.answers.authorEmail,
@@ -81,11 +81,11 @@ describe('node:app', function () {
 
     it('creates and fill contents in README.md', function () {
       assert.file('README.md');
-      assert.fileContent('README.md', 'var generatorNode = require(\'generator-node\');');
+      assert.fileContent('README.md', 'var generatorNode = require(\'generator-db-node\');');
       assert.fileContent('README.md', '> A node generator');
-      assert.fileContent('README.md', '$ npm install --save generator-node');
+      assert.fileContent('README.md', '$ npm install --save generator-db-node');
       assert.fileContent('README.md', '© [The Yeoman Team](http://yeoman.io)');
-      assert.fileContent('README.md', '[travis-image]: https://travis-ci.org/yeoman/generator-node.svg?branch=master');
+      assert.fileContent('README.md', '[travis-image]: https://travis-ci.org/yeoman/generator-db-node.svg?branch=master');
       assert.fileContent('README.md', 'coveralls');
     });
   });
@@ -96,14 +96,14 @@ describe('node:app', function () {
         version: '1.0.34',
         description: 'lots of fun',
         homepage: 'http://yeoman.io',
-        repository: 'yeoman/generator-node',
+        repository: 'yeoman/generator-db-node',
         author: 'The Yeoman Team',
         files: ['lib'],
         keywords: ['bar']
       };
       return helpers.run(path.join(__dirname, '../generators/app'))
         .withPrompts({
-          name: 'generator-node'
+          name: 'generator-db-node'
         })
         .on('ready', function (gen) {
           gen.fs.writeJSON(gen.destinationPath('package.json'), this.pkg);
@@ -113,7 +113,7 @@ describe('node:app', function () {
     });
 
     it('extends package.json keys with missing ones', function () {
-      var pkg = _.extend({name: 'generator-node'}, this.pkg);
+      var pkg = _.extend({name: 'generator-db-node'}, this.pkg);
       assert.jsonFileContent('package.json', pkg);
     });
 

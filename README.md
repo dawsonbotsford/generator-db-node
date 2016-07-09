@@ -1,16 +1,16 @@
-# Node Generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-node.svg?branch=master)](https://travis-ci.org/yeoman/generator-node) [![Gitter](https://img.shields.io/badge/Gitter-Join_the_Yeoman_chat_%E2%86%92-00d06f.svg)](https://gitter.im/yeoman/yeoman) [![OpenCollective](https://opencollective.com/yeoman/badge/backers.svg)](https://opencollective.com/yeoman#support)
+# Node Generator 
 
-`generator-node` creates a base template to start a new Node.js module.
+`generator-db-node` creates a base template to start a new Node.js module.
 
 It is also easily composed into your own generators so you can only target your efforts at your generator's specific features.
 
-Maintained by [Hemanth.HM](http://github.com/hemanth).
+Maintained by [Dawson Botsford](http://github.com/hemanth).
 
 
 ## Install
 
 ```
-$ npm install --global generator-node
+$ npm install --global generator-db-node
 ```
 
 
@@ -69,7 +69,7 @@ module.exports = generators.Base.extend({
     this.composeWith('node:app', {
       options: {/* provide the options you want */}
     }, {
-      local: require.resolve('generator-node/generators/app')
+      local: require.resolve('generator-db-node/generators/app')
     });
   }
 });
@@ -88,7 +88,7 @@ Here's a list of our supported options:
 - `license` (Boolean, default true) include or not a `LICENSE` file.
 - `travis` (Boolean, default true) include or not a `.travis.yml` file.
 - `githubAccount` (String) Account name for GitHub repo location.
-- `readme` (String) content of the `README.md` file. Given this option, generator-node will still generate the title (with badges) and the license section.
+- `readme` (String) content of the `README.md` file. Given this option, generator-db-node will still generate the title (with badges) and the license section.
 
 ### Sub generators
 
